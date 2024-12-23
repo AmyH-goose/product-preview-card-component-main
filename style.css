@@ -42,6 +42,7 @@
  /* custom properties  */
 :root {
     --clr-dark-cyan: hsl(158, 36%, 37%);
+    --clr-darker-cyan: hsl(158, 36%, 25%);
     --clr-cream: hsl(30, 38%, 92%);
 
     --clr-dark-blue: hsl(212, 21%, 14%);
@@ -59,6 +60,20 @@
   display: flex;
   gap: 1rem;
   align-items: center;
+}
+
+.sr-only {
+    border: 0; 
+    clip: rect(0 0 0 0); 
+    -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px); 
+    clip-path: polygon(0px 0px, 0px 0px, 0px 0px); 
+    height: 1px; 
+    margin: -1px; 
+    overflow: hidden; 
+    padding: 0; 
+    position: absolute; 
+    width: 1px; 
+    white-space: nowrap; 
 }
 
 body {
@@ -114,12 +129,17 @@ body {
 
 .button {
   justify-content: center;
+  cursor: pointer;
   padding: .825rem 2rem;
   color: var(--clr-white);
   font-weight: var(--fw-bold);
   background-color: var(--clr-dark-cyan);
-  border: none;
+  border: 0;
   border-radius: .5rem;
+}
+
+.button:hover, .button:focus {
+  background-color: var(--clr-darker-cyan);
 }
 
 
