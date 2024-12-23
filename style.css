@@ -55,6 +55,12 @@
     --ff-fraunces: "Fraunces", serif;
 }
 
+.flex {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
 body {
     font-family: var(--ff-montserrat);
     font-weight: var(--fw-regular);
@@ -77,4 +83,43 @@ body {
 
 .product-content {
     padding: 1.5rem;
+    display: grid;
+    gap: .825rem;
 }
+
+.product-category {
+  text-transform: uppercase;
+  letter-spacing: .5em;
+  font-size: 0.75rem;
+}
+
+.product-name {
+  color: var(--clr-dark-blue);
+  font-family: var(--ff-fraunces);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.product-price {
+  font-family: var(--ff-fraunces);
+  color: var(--clr-dark-cyan);
+  font-size: 2rem;
+  font-weight: var(--fw-bold);
+  
+}
+
+.product-price-original {
+  text-decoration: line-through;
+}
+
+.button {
+  justify-content: center;
+  padding: .825rem 2rem;
+  color: var(--clr-white);
+  font-weight: var(--fw-bold);
+  background-color: var(--clr-dark-cyan);
+  border: none;
+  border-radius: .5rem;
+}
+
+
