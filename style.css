@@ -10,9 +10,14 @@
   
   body {
     /* 3. Add accessible line-height */
-    line-height: 1.5;
+    line-height: 1.7;
     /* 4. Improve text rendering */
     -webkit-font-smoothing: antialiased;
+  }
+
+  body,
+  html {
+    height: 100%;
   }
   
   /* 5. Improve media defaults */
@@ -84,28 +89,29 @@ body {
     background-color: var(--clr-cream);
 
     display: grid;
-    place-items: center;
-    height: 100vh;
-    padding: 1rem;
+    place-content: center;
+    margin: 1rem;
 }
 
 
 .product-card {
+    display: grid;
     background-color: var(--clr-white);
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     overflow: hidden;
+    max-width: 600px;
 }
 
 .product-content {
-    padding: 1.5rem;
     display: grid;
-    gap: .825rem;
+    padding: 1.5rem;
+    gap: 1rem;
 }
 
 .product-category {
   text-transform: uppercase;
   letter-spacing: .5em;
-  font-size: 0.75rem;
+  font-size: 0.825rem;
 }
 
 .product-name {
@@ -142,4 +148,17 @@ body {
   background-color: var(--clr-darker-cyan);
 }
 
+@media screen and (min-width: 600px) {
+    .product-card {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-content {
+      padding: 2rem;
+    }
+    
+    .button {
+      padding: .25rem 2rem;
+    }
+}
 
